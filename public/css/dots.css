@@ -1,0 +1,112 @@
+.dots {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    width: 120px;
+}
+
+.dot1, .dot2, .dot3, .dot4, .dot5 {
+    height: 20px;
+    width: 20px;
+    background-color: #D7DCE8;
+    /* border: 0.5px solid #60687A; */
+    border-radius: 50%;
+    border: none;
+    transition: 0.1s ease-in-out;
+    margin: 2px;
+    opacity: 0.8;
+}
+
+.dot1:focus, .dot2:focus, .dot3:focus, .dot4:focus, .dot5:focus {
+    outline: none;
+}
+
+.dot5:hover {
+    background-color: #992b2b;
+}
+
+.dot4:hover, .dot4:hover~.dot5 {
+    background-color: #be6c1f;
+}
+
+.dot3:hover, .dot3:hover~.dot4, .dot3:hover~.dot5 {
+    background-color: #d4c53d;
+}
+
+.dot2:hover, .dot2:hover~.dot3, .dot2:hover~.dot4, .dot2:hover~.dot5 {
+    background-color: #71d321;
+}
+
+.dot1:hover, .dot1:hover~.dot2, .dot1:hover~.dot3, .dot1:hover~.dot4, .dot1:hover~.dot5 {
+    background-color: #01a332;
+}
+
+.dot5:focus {
+    background-color: #992b2b;
+}
+
+.dot4:focus, .dot4:focus~.dot5 {
+    background-color: #be6c1f;
+}
+
+.dot3:focus, .dot3:focus~.dot4, .dot3:focus~.dot5 {
+    background-color: #d4c53d;
+}
+
+.dot2:focus, .dot2:focus~.dot3, .dot2:focus~.dot4, .dot2:focus~.dot5 {
+    background-color: #71d321;
+}
+
+.dot1:focus, .dot1:focus~.dot2, .dot1:focus~.dot3, .dot1:focus~.dot4, .dot1:focus~.dot5 {
+    background-color: #01a332;
+}
+
+.my-rating {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+.my-rating-display1 {
+    height: 20px;
+    width: 20px;
+    background-color: #992b2b;
+    border-radius: 50%;
+    border: none;
+    margin: 2px;
+}
+
+.my-rating-display2 {
+    height: 20px;
+    width: 20px;
+    background-color: #be6c1f;
+    border-radius: 50%;
+    border: none;
+    margin: 2px;
+}
+
+.my-rating-display3 {
+    height: 20px;
+    width: 20px;
+    background-color: #d4c53d;
+    border-radius: 50%;
+    border: none;
+    margin: 2px;
+}
+
+.my-rating-display4 {
+    height: 20px;
+    width: 20px;
+    background-color: #71d321;
+    border-radius: 50%;
+    border: none;
+    margin: 2px;
+}
+
+.my-rating-display5 {
+    height: 20px;
+    width: 20px;
+    background-color: #01a332;
+    border-radius: 50%;
+    border: none;
+    margin: 2px;
+}

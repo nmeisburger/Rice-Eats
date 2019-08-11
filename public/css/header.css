@@ -1,0 +1,8 @@
+.header {
+    position: fixed;
+    top: 0;
+}
+
+.header h1 {
+    margin: 20px;
+}

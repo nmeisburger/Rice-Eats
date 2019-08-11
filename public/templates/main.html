@@ -1,0 +1,45 @@
+<div>
+    <div class='header'>
+        <h1>Rice Eats</h1>
+
+    </div>
+    <h1>{{test}}</h1>
+    <div class='main'>
+        <div>
+            <div ng-repeat="servery in menus" class='servery'>
+                <h1 class='servery-name'>{{servery.name}}</h1>
+                <div ng-repeat="item in servery.menu" class='menu-item'>
+                    <p>{{item.name}}</p>
+                    <div class='dots' ng-show="!item.submitted">
+                        <button class='dot1' ng-click="setRating(servery.index, item.index, 5)"></button>
+                        <button class='dot2' ng-click="setRating(servery.index, item.index, 4)"></button>
+                        <button class='dot3' ng-click="setRating(servery.index, item.index, 3)"></button>
+                        <button class='dot4' ng-click="setRating(servery.index, item.index, 2)"></button>
+                        <button class='dot5' ng-click="setRating(servery.index, item.index, 1)"></button>
+                    </div>
+                    <div class='my-rating' ng-show="item.submitted">
+                        <div class="my-rating-display1" ng-show="item.rating == 1"></div>
+                        <div class="my-rating-display2" ng-show="item.rating == 2"></div>
+                        <div class="my-rating-display2" ng-show="item.rating == 2"></div>
+                        <div class="my-rating-display3" ng-show="item.rating == 3"></div>
+                        <div class="my-rating-display3" ng-show="item.rating == 3"></div>
+                        <div class="my-rating-display3" ng-show="item.rating == 3"></div>
+                        <div class="my-rating-display4" ng-show="item.rating == 4"></div>
+                        <div class="my-rating-display4" ng-show="item.rating == 4"></div>
+                        <div class="my-rating-display4" ng-show="item.rating == 4"></div>
+                        <div class="my-rating-display4" ng-show="item.rating == 4"></div>
+                        <div class="my-rating-display5" ng-show="item.rating == 5"></div>
+                        <div class="my-rating-display5" ng-show="item.rating == 5"></div>
+                        <div class="my-rating-display5" ng-show="item.rating == 5"></div>
+                        <div class="my-rating-display5" ng-show="item.rating == 5"></div>
+                        <div class="my-rating-display5" ng-show="item.rating == 5"></div>
+                    </div>
+                    <p class="rating" ng-show="item.numRatings > 0">Avg Rating: {{item.avgRating}} - {{item.numRatings}} Reviews</p>
+                    <p class="rating" ng-show="item.numRatings == 0">No Reviews Yet</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
