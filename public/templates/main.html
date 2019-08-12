@@ -1,45 +1,91 @@
 <div>
+    <input type="checkbox" id="toggle">
     <div class='header'>
         <h1>Rice Eats</h1>
-
     </div>
-    <h1>{{test}}</h1>
+    <label for='toggle' class='about-open'>?</label>
+    <label for='toggle' class='about-close'><img src="https://icon.now.sh/x/F7F9FC" alt="X" /></label>
+    <div class='about'>
+        <h1>About</h1>
+        <div class="line"></div>
+        <div class='about-img'>
+            <img src="https://icon.now.sh/record_voice_over/F7F9FC/60" alt="" />
+        </div>
+        <p>Rice Eats is a web app designed for students at Rice University to view the meals currently availible at each
+            of the serveries, and then leave reviews for those meals and view the rating of each meal as
+            determined by the community of students.</p>
+        <div class="about-img">
+            <img src="https://icon.now.sh/touch_app/F7F9FC/60" alt="" />
+        </div>
+        <p>To leave a review just click or tap on one of the 5 grey circles next to the item you wish to review.</p>
+    </div>
     <div class='main'>
         <div>
             <div ng-repeat="servery in menus" class='servery'>
                 <h1 class='servery-name'>{{servery.name}}</h1>
                 <div ng-repeat="item in servery.menu" class='menu-item'>
-                    <p>{{item.name}}</p>
-                    <div class='dots' ng-show="!item.submitted">
-                        <button class='dot1' ng-click="setRating(servery.index, item.index, 5)"></button>
-                        <button class='dot2' ng-click="setRating(servery.index, item.index, 4)"></button>
-                        <button class='dot3' ng-click="setRating(servery.index, item.index, 3)"></button>
-                        <button class='dot4' ng-click="setRating(servery.index, item.index, 2)"></button>
-                        <button class='dot5' ng-click="setRating(servery.index, item.index, 1)"></button>
-                    </div>
-                    <div class='my-rating' ng-show="item.submitted">
-                        <div class="my-rating-display1" ng-show="item.rating == 1"></div>
-                        <div class="my-rating-display2" ng-show="item.rating == 2"></div>
-                        <div class="my-rating-display2" ng-show="item.rating == 2"></div>
-                        <div class="my-rating-display3" ng-show="item.rating == 3"></div>
-                        <div class="my-rating-display3" ng-show="item.rating == 3"></div>
-                        <div class="my-rating-display3" ng-show="item.rating == 3"></div>
-                        <div class="my-rating-display4" ng-show="item.rating == 4"></div>
-                        <div class="my-rating-display4" ng-show="item.rating == 4"></div>
-                        <div class="my-rating-display4" ng-show="item.rating == 4"></div>
-                        <div class="my-rating-display4" ng-show="item.rating == 4"></div>
-                        <div class="my-rating-display5" ng-show="item.rating == 5"></div>
-                        <div class="my-rating-display5" ng-show="item.rating == 5"></div>
-                        <div class="my-rating-display5" ng-show="item.rating == 5"></div>
-                        <div class="my-rating-display5" ng-show="item.rating == 5"></div>
-                        <div class="my-rating-display5" ng-show="item.rating == 5"></div>
-                    </div>
-                    <p class="rating" ng-show="item.numRatings > 0">Avg Rating: {{item.avgRating}} - {{item.numRatings}} Reviews</p>
-                    <p class="rating" ng-show="item.numRatings == 0">No Reviews Yet</p>
-                </div>
+                    <p class="menu-item-name">{{item.name}}</p>
+                    <div class="menu-item-line">
+                        <p class="line-text" ng-show="item.numRatings > 0">Community Rating:</p>
+                        <p ng-show="item.numRatings == 0">No Ratings Yet</p>
+                        <div class="avg-rating" ng-show="item.numRatings > 0">
+                            <div class="half-dot color1" ng-show="item.avgRating < 0.7"></div>
+                            <div class="full-dot color1" ng-show="item.avgRating >= 0.7 && item.avgRating < 1.2"></div>
 
+                            <div class="full-dot color2" ng-show="item.avgRating >= 1.2 && item.avgRating < 2.2"></div>
+                            <div class="half-dot color2" ng-show="item.avgRating >= 1.2 && item.avgRating < 1.8"></div>
+                            <div class="full-dot color2" ng-show="item.avgRating >= 1.8 && item.avgRating < 2.2"></div>
+
+                            <div class="full-dot color3" ng-show="item.avgRating >= 2.2 && item.avgRating < 3.2"></div>
+                            <div class="full-dot color3" ng-show="item.avgRating >= 2.2 && item.avgRating < 3.2"></div>
+                            <div class="half-dot color3" ng-show="item.avgRating >= 2.2 && item.avgRating < 2.8"></div>
+                            <div class="full-dot color3" ng-show="item.avgRating >= 2.8 && item.avgRating < 3.2"></div>
+
+                            <div class="full-dot color4" ng-show="item.avgRating >= 3.2 && item.avgRating < 4.2"></div>
+                            <div class="full-dot color4" ng-show="item.avgRating >= 3.2 && item.avgRating < 4.2"></div>
+                            <div class="full-dot color4" ng-show="item.avgRating >= 3.2 && item.avgRating < 4.2"></div>
+                            <div class="half-dot color4" ng-show="item.avgRating >= 3.2 && item.avgRating < 3.8"></div>
+                            <div class="full-dot color4" ng-show="item.avgRating >= 3.8 && item.avgRating < 4.2"></div>
+
+                            <div class="full-dot color5" ng-show="item.avgRating >= 4.2"></div>
+                            <div class="full-dot color5" ng-show="item.avgRating >= 4.2"></div>
+                            <div class="full-dot color5" ng-show="item.avgRating >= 4.2"></div>
+                            <div class="full-dot color5" ng-show="item.avgRating >= 4.2"></div>
+                            <div class="half-dot color5" ng-show="item.avgRating >= 4.2 && item.avgRating < 4.8"></div>
+                            <div class="full-dot color5" ng-show="item.avgRating >= 4.8"></div>
+                        </div>
+                        <p ng-show="item.numRatings > 0">{{item.avgRating}} - {{item.numRatings}} Ratings</p>
+                        <!-- <p ng-show="item.numRatings > 0">{{item.avgRating}}</p> -->
+                    </div>
+                    <div class="menu-item-line">
+                        <p class="line-text">Your Rating: </p>
+                        <div class='dots' ng-show="!item.submitted">
+                            <button class='dot1' ng-click="setRating(servery.index, item.index, 5)"></button>
+                            <button class='dot2' ng-click="setRating(servery.index, item.index, 4)"></button>
+                            <button class='dot3' ng-click="setRating(servery.index, item.index, 3)"></button>
+                            <button class='dot4' ng-click="setRating(servery.index, item.index, 2)"></button>
+                            <button class='dot5' ng-click="setRating(servery.index, item.index, 1)"></button>
+                        </div>
+                        <div class='my-rating' ng-show="item.submitted">
+                            <div class="full-dot color1" ng-show="item.rating == 1"></div>
+                            <div class="full-dot color2" ng-show="item.rating == 2"></div>
+                            <div class="full-dot color2" ng-show="item.rating == 2"></div>
+                            <div class="full-dot color3" ng-show="item.rating == 3"></div>
+                            <div class="full-dot color3" ng-show="item.rating == 3"></div>
+                            <div class="full-dot color3" ng-show="item.rating == 3"></div>
+                            <div class="full-dot color4" ng-show="item.rating == 4"></div>
+                            <div class="full-dot color4" ng-show="item.rating == 4"></div>
+                            <div class="full-dot color4" ng-show="item.rating == 4"></div>
+                            <div class="full-dot color4" ng-show="item.rating == 4"></div>
+                            <div class="full-dot color5" ng-show="item.rating == 5"></div>
+                            <div class="full-dot color5" ng-show="item.rating == 5"></div>
+                            <div class="full-dot color5" ng-show="item.rating == 5"></div>
+                            <div class="full-dot color5" ng-show="item.rating == 5"></div>
+                            <div class="full-dot color5" ng-show="item.rating == 5"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 </div>

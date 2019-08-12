@@ -1,19 +1,17 @@
 .dots {
     display: inline-flex;
     flex-direction: row-reverse;
-    width: 120px;
+    margin-left: 20px;
 }
 
 .dot1, .dot2, .dot3, .dot4, .dot5 {
     height: 20px;
     width: 20px;
     background-color: #D7DCE8;
-    /* border: 0.5px solid #60687A; */
     border-radius: 50%;
     border: none;
     transition: 0.1s ease-in-out;
     margin: 2px;
-    opacity: 0.8;
 }
 
 .dot1:focus, .dot2:focus, .dot3:focus, .dot4:focus, .dot5:focus {
@@ -60,53 +58,40 @@
     background-color: #01a332;
 }
 
-.my-rating {
-    width: 150px;
-    display: flex;
-    flex-direction: row;
-}
-
-.my-rating-display1 {
+.full-dot {
     height: 20px;
     width: 20px;
+    border-radius: 50%;
+    border: none;
+    margin: 0.5px;
+    display: inline-block;
+}
+
+.half-dot {
+    height: 20px;
+    width: 10px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    margin: 0.5px;
+    display: inline-block;
+}
+
+.color1 {
     background-color: #992b2b;
-    border-radius: 50%;
-    border: none;
-    margin: 2px;
 }
 
-.my-rating-display2 {
-    height: 20px;
-    width: 20px;
+.color2 {
     background-color: #be6c1f;
-    border-radius: 50%;
-    border: none;
-    margin: 2px;
 }
 
-.my-rating-display3 {
-    height: 20px;
-    width: 20px;
+.color3 {
     background-color: #d4c53d;
-    border-radius: 50%;
-    border: none;
-    margin: 2px;
 }
 
-.my-rating-display4 {
-    height: 20px;
-    width: 20px;
+.color4 {
     background-color: #71d321;
-    border-radius: 50%;
-    border: none;
-    margin: 2px;
 }
 
-.my-rating-display5 {
-    height: 20px;
-    width: 20px;
+.color5 {
     background-color: #01a332;
-    border-radius: 50%;
-    border: none;
-    margin: 2px;
 }
