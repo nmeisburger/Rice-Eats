@@ -36,7 +36,13 @@ angular.module('RiceEats')
         }
 
         menuService.getMenus().success(data => {
-            $scope.menus = data.data;
+            const tempMenus = data.data;
+            const serveries = ["Baker", "North", "Seibel", "SidRich", "South", "West"]
+            for (let i = 0; i < tempMenus.length; i++) {
+                if (serveries.includes(tempMenus[i].name)) {
+                    $scope.menus.push(tempMenus[i])
+                }
+            }
             $scope.initializeMenuData($scope.menus);            
         })
 
