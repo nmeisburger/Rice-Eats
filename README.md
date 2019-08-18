@@ -22,13 +22,13 @@ The app defaults to using `mongodb://localhost/riceeats` as the database for the
 
 1. Run `$ git add .`
 2. Run `$ git commit -m <commit message>`
-3. Run `$ git push` to push to changes to this repository
-4. Run `$ git push heroku master` to push the changes to the deployed instance of the app
+3. Run `$ git push` to push to changes to this repository.
+4. Run `$ git push heroku master` to push the changes to the deployed instance of the app.
 
 ### Initial Deployment to Heroku
 
 1. Install Heroku CLI with `npm install -g heroku` if it is not already installed.
-2. Run `heroku create <project name>`.
+2. Run `heroku create <project name>`
 3. Run `git remote -v` to confirm that this worked. You should see the following:
             
             $ git remote -v
@@ -37,8 +37,8 @@ The app defaults to using `mongodb://localhost/riceeats` as the database for the
             origin git@github.com:nsafai/<git repo name>.git (fetch)
             origin git@github.com:nsafai/<git repo name>.git (push)
 
-4. Run `$ git add .`.
-5. Run `$ git commit -m <commit message>`.
+4. Run `$ git add .`
+5. Run `$ git commit -m <commit message>`
 6. Run `$ git push heroku master` to push the app to heroku.
 7. Run `$ heroku ps:scale web=1` to set up a free server to host the app.
 8. Run `$ heroku addons:create mongolab` to create a free mongolab database for the app. Note that heroku will automatically populate the `MONGODB_URI` environment variable with the database address.
