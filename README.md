@@ -28,9 +28,9 @@ The app defaults to using `mongodb://localhost/riceeats` as the database for the
 
 ### Initial Deployment to Heroku
 
-1. Install Heroku CLI with `npm install -g heroku` if it is not already installed.
-2. Run `heroku create <project name>`
-3. Run `git remote -v` to confirm that this worked. You should see the following:
+1. Install Heroku CLI with `$ npm install -g heroku` if it is not already installed.
+2. Run `$ heroku create <project name>`
+3. Run `$ git remote -v` to confirm that this worked. You should see the following:
             
             $ git remote -v
             heroku https://git.heroku.com/<project name>.git (fetch)
