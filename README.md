@@ -29,16 +29,15 @@ The app defaults to using `mongodb://localhost/riceeats` as the database for the
 
 1. Install Heroku CLI with `npm install -g heroku` if it is not already installed
 2. Run `heroku create <project name>`
-3. Run `git remote -v` to confirm that this worked
-            You should see
+3. Run `git remote -v` to confirm that this worked. You should see the following:
             
-            `heroku https://git.heroku.com/unique-project-name.git (fetch)`
+            `git remote -v`
+            `heroku https://git.heroku.com/<project name>.git (fetch)\n`
+            `heroku https://git.heroku.com/<project name>.git (push)`
             
-            `heroku https://git.heroku.com/unique-project-name.git (push)`
+            `origin git@github.com:nsafai/<git repo name>.git (fetch)`
             
-            `origin git@github.com:nsafai/Your-Git-Repo.git (fetch)`
-            
-            `origin git@github.com:nsafai/Your-Git-Repo.git (push)`
+            `origin git@github.com:nsafai/<git repo name>.git (push)`
 
 ## App Overview
 Rice Eats is a web app designed for students at Rice University to view the meals currently availible at each
