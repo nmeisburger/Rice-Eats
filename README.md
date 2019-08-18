@@ -1,6 +1,7 @@
 # Rice-Eats
-App for viewing servery menus and rating meals
-
+Rice Eats is a web app designed for students at Rice University to view the meals currently availible at each
+            of the serveries, and then leave reviews for those meals and view the rating of each meal as
+            determined by the community of students.
 ## Development 
 
 ### Running the app locally in development mode
