@@ -37,6 +37,9 @@
     #toggle:checked ~ .about {
         top: 0;
     }
+    .about p {
+        font-size: 0.8em;
+    }
 }
 
 #toggle:checked~.about-close {
