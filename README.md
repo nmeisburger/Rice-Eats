@@ -21,7 +21,7 @@ The app defaults to using `mongodb://localhost/riceeats` as the database for the
 ## Deployment
 
 1. Run `$ git add .`
-2. Run `$ git commit -m <commit message.`
+2. Run `$ git commit -m <commit message>`
 3. Run `$ git push` to push to changes to this repository
 4. Run `$ git push heroku master` to push the changes to the deployed instance of the app
 
@@ -31,13 +31,18 @@ The app defaults to using `mongodb://localhost/riceeats` as the database for the
 2. Run `heroku create <project name>`
 3. Run `git remote -v` to confirm that this worked. You should see the following:
             
-            `git remote -v`
-            `heroku https://git.heroku.com/<project name>.git (fetch)\n`
-            `heroku https://git.heroku.com/<project name>.git (push)`
-            
-            `origin git@github.com:nsafai/<git repo name>.git (fetch)`
-            
-            `origin git@github.com:nsafai/<git repo name>.git (push)`
+            git remote -v
+            heroku https://git.heroku.com/<project name>.git (fetch)
+            heroku https://git.heroku.com/<project name>.git (push)
+            origin git@github.com:nsafai/<git repo name>.git (fetch)
+            origin git@github.com:nsafai/<git repo name>.git (push)
+
+4. Run `$ git add .`
+5. Run `$ git commit -m <commit message>`
+6. Run `$ git push heroku master` to push the app to heroku
+7. Run `$ heroku ps:scale web=1` to set up a free server to host the app
+8. Run `$ heroku addons:create mongolab` to create a free mongolab database for the app. Note that heroku will automatically populate the `MONGODB_URI` environment variable with the database address
+9. Run `$ heroku open` to view the app in deployment
 
 ## App Overview
 Rice Eats is a web app designed for students at Rice University to view the meals currently availible at each
