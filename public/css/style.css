@@ -60,6 +60,11 @@ h1, h2, h3, h4 {
     color: #315A91;
 }
 
+.servery-name span {
+    color: #60687A;
+    font-size: 0.7em;
+}
+
 .menu-item {
     display: flex;
     flex-direction: row;

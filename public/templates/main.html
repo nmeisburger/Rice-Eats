@@ -22,7 +22,7 @@
     <div class='main'>
         <div>
             <div ng-repeat="servery in menus" class='servery'>
-                <h1 class='servery-name'>{{servery.name}}</h1>
+                <h1 class='servery-name'>{{servery.name}}<span ng-show="servery.menu.length == 0"> - Servery Closed</span></h1>
                 <div ng-repeat="item in servery.menu" class='menu-item'>
                     <p class="menu-item-name">{{item.name}}</p>
                     <div class="menu-item-line">

@@ -78,7 +78,7 @@ router.route('/menuitem')
             $inc: { ratingTotal: rating, numRatings: 1 }
         }, { new: true, useFindAndModify: false })
             .then(item => {
-                const expiration = new Date(new Date().getTime() + 60 * 60 * 1000);
+                const expiration = new Date(new Date().getTime() + 30 * 24 * 60 * 60 * 1000);
                 console.log(expiration.toString());
                 res.cookie(id, { id: id, rating: rating }, { expires: expiration });
                 return res.send({

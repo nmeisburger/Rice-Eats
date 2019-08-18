@@ -18,6 +18,9 @@
         margin: 10px;
         display: inline;
     }
+    .header {
+        position: absolute;
+    }
 }
 
 .about-open {
@@ -56,4 +59,8 @@
 .about-close img {
     margin: 0;
     padding: 7px;
+}
+
+.about-open:hover, .about-close:hover {
+    cursor: pointer;
 }

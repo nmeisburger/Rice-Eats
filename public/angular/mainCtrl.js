@@ -7,7 +7,6 @@ angular.module('RiceEats')
             $http.get('/api/cookies')
                 .then(data => {
                     const cookies = data.data;
-                    console.log(cookies);
                     for (let i = 0; i < menus.length; i++) {
                         let servery = menus[i];
                         servery.index = i;
