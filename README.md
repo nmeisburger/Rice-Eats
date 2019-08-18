@@ -31,9 +31,13 @@ The app defaults to using `mongodb://localhost/riceeats` as the database for the
 2. Run `heroku create <project name>`
 3. Run `git remote -v` to confirm that this worked
             You should see
+            
             `heroku https://git.heroku.com/unique-project-name.git (fetch)`
+            
             `heroku https://git.heroku.com/unique-project-name.git (push)`
+            
             `origin git@github.com:nsafai/Your-Git-Repo.git (fetch)`
+            
             `origin git@github.com:nsafai/Your-Git-Repo.git (push)`
 
 ## App Overview
